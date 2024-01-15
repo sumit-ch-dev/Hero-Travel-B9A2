@@ -13,6 +13,16 @@ main {
     margin: 0 130px;
 }
 
+.btn-primary {
+    background-color: var(--Button-01);
+    border: none;
+    width: 180px;
+    height: 60px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 8px;
+}
 
 /* header styles */
 
@@ -117,6 +127,34 @@ nav .nav-item-container {
     padding-left: 16px;
     color: #fff
 }
+
+/* tour secton styles */
+
+.tour-section {
+    display: flex;
+    margin-top: 100px;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+
+.tour-heading {
+    color: var(--Dark-01);
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.tour-content,
+.tour-image {
+    flex: 1;
+}
+
+.tour-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 
 /* border-radius: 16px;
 background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%); */
