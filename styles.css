@@ -27,6 +27,10 @@ nav .logo {
     align-items: center;
 }
 
+nav .small-navbar {
+    display: none;
+}
+
 nav .name {
     font-size: 36px;
     font-weight: 800;
@@ -87,13 +91,15 @@ nav .nav-item-container {
 .search-box {
     display: flex;
     border-radius: 8px;
+    justify-content: center;
+    align-items: center;
     background: rgba(255, 255, 255, 0.30);
     gap: 24px;
     padding: 16px;
 }
 
 .search-box input {
-    width: 170px;
+    width: 30%;
     height: 50px;
     border: none;
     border-radius: 8px;
@@ -105,10 +111,60 @@ nav .nav-item-container {
     background-color: #FF5400;
     border: none;
     border-radius: 8px;
-    width: 170px;
+    width: 30%;
+    height: 50px;
     font-size: 1.2rem;
+    padding-left: 16px;
     color: #fff
 }
 
 /* border-radius: 16px;
 background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%); */
+
+
+/* small screen styles */
+
+@media screen and (max-width: 576px) {
+
+    header,
+    main {
+        margin: 0 20px;
+    }
+
+    .nav .name {
+        font-size: 20px;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    nav .small-navbar {
+        display: block;
+    }
+
+    .hero {
+        background-position: center;
+    }
+
+    .search-box,
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero .hero-title {
+        font-size: 1.3rem;
+    }
+
+    .hero .hero-subtitle {
+        width: 80%;
+    }
+
+    .hero input {
+        width: 80%;
+    }
+
+    .hero .search-btn {
+        width: calc(80% + 16px);
+    }
+}
