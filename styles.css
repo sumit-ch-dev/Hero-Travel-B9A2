@@ -1,0 +1,114 @@
+* {
+    font-family: 'Mulish', sans-serif;
+}
+
+:root {
+    --Dark-01: #131318;
+    --Dark-02: #424247;
+    --Button-01: #FF5400;
+}
+
+header,
+main {
+    margin: 0 130px;
+}
+
+
+/* header styles */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .name {
+    font-size: 36px;
+    font-weight: 800;
+    padding-left: 15px;
+}
+
+nav .nav-item-container {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-item-container li {
+    list-style: none;
+}
+
+.nav-item-container li a {
+    font-size: 1.2rem;
+    color: var(--Dark-02);
+    text-decoration: none;
+}
+
+
+/* main styles */
+
+/* hero section */
+
+.hero {
+    background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url("./Images/hero-background.png");
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    height: 700px;
+    border-radius: 20px;
+
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 100px;
+}
+
+.hero-title {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    color: #fff;
+    width: 50%;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+    gap: 24px;
+    padding: 16px;
+}
+
+.search-box input {
+    width: 170px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    padding-left: 16px;
+}
+
+.search-box .search-btn {
+    background-color: #FF5400;
+    border: none;
+    border-radius: 8px;
+    width: 170px;
+    font-size: 1.2rem;
+    color: #fff
+}
+
+/* border-radius: 16px;
+background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%); */
