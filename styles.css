@@ -166,7 +166,8 @@ nav .nav-item-container {
     flex: 1;
 }
 
-.tour-content {
+.tour-content,
+.video-content {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -282,32 +283,187 @@ nav .nav-item-container {
 /* why choose us */
 
 .hotels {
-    display: flex;
-    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid rgba(251, 181, 99, 0.20);
+    background: rgba(251, 181, 99, 0.05);
+    padding: 32px;
+    /* grid-area: hotels;    */
+}
+
+.service {
+    border-radius: 16px;
+    border: 1px solid rgba(41, 206, 246, 0.20);
+    background: rgba(41, 206, 246, 0.05);
+    padding: 32px;
+    /* grid-area: service; */
+}
+
+.cards img,
+.price-card img {
+    width: 64px;
+    height: 64px;
+}
+
+
+
+.guarantee {
     border-radius: 16px;
     border: 1px solid rgba(251, 181, 99, 0.20);
     background: rgba(251, 181, 99, 0.05);
     padding: 32px;
 }
 
-.service {
-    display: flex;
-    flex-direction: column;
-    border-radius: 16px;
-    border: 1px solid rgba(41, 206, 246, 0.20);
-    background: rgba(41, 206, 246, 0.05);
-    padding: 32px;
-}
-
-.cards img {
-    width: 64px;
-    height: 64px;
-}
-
 .cards {
     display: flex;
-    gap: 32px;
+    flex-direction: column;
 }
+
+.first-row {
+    display: flex;
+    gap: 20px;
+}
+
+.second-row {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+
+.video-section {
+    display: flex;
+    margin-top: 100px;
+    gap: 50px;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.video-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--Dark-01);
+}
+
+.video-content p {
+    font-size: 1.2rem;
+    color: #5A5A5D
+}
+
+.video-content li {
+    padding: 10px 0;
+    color: var(--Dark-01);
+    font-weight: 700;
+}
+
+.video {
+    width: 3000px;
+}
+
+.video img {
+    width: 100%;
+}
+
+
+/* newsletter styles */
+
+.newsletter-section {
+    display: flex;
+}
+
+.newsletter {
+    width: 40%;
+    border-radius: 16px;
+    border: 1px solid #FF5400;
+    padding: 40px;
+}
+
+.newsletter h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--Dark-01);
+}
+
+.newsletter input {
+    width: 97%;
+    height: 50px;
+    border-radius: 8px;
+    background: rgba(19, 19, 24, 0.05);
+    padding-left: 16px;
+    font-size: 1.2rem;
+    color: #1313184D;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.newsletter>input {
+    margin-top: 20px;
+}
+
+.newsletter-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.subscribe-btn {
+    width: 100%;
+}
+
+.image-container {
+    width: 60%;
+    position: relative;
+}
+
+.savings-amount {
+    /* style="color: #fff; font-size: 2rem; font-weight: 800; text-align: center; */
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.savings-name {
+    /* style="color: #fff; font-size: 1.5rem; text-align: center;" */
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.savings {
+    background-color: #FF5400;
+    width: 320px;
+    height: 120px;
+    padding: 16px;
+    position: absolute;
+    top: 370px;
+    right: 30px;
+    border-radius: 16px;
+    transform: rotate(-20deg);
+}
+
+
+/* footer styles */
+
+.footer {
+    background-color: rgba(19, 19, 24, 0.05);
+    margin-top: 100px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .logo {
+    display: flex;
+    align-items: center;
+}
+
 
 
 /* border-radius: 16px;
@@ -341,7 +497,11 @@ background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 
 
     .search-box,
     .hero,
-    .tour-section {
+    .tour-section,
+    .cards,
+    .first-row,
+    .newsletter-section,
+    .video-section {
         flex-direction: column;
     }
 
@@ -359,5 +519,61 @@ background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 
 
     .hero .search-btn {
         width: calc(80% + 16px);
+    }
+
+    .destination-grid {
+        grid-template-areas:
+            "maldives"
+            "indonesia"
+            "sri-lanka"
+            "north-america"
+            "kashmir"
+            "bangladesh"
+            "bandarban"
+        ;
+    }
+
+    .second-row {
+        width: 100%;
+    }
+
+    .newsletter {
+        width: 70%;
+    }
+
+    .newsletter input {
+        width: 100%;
+    }
+
+    .newsletter button {
+        width: calc(100% + 16px);
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .image-container img {
+        width: 330px;
+        height: 300px;
+    }
+
+    .image-container .savings {
+        top: 150px;
+        right: 0;
+        width: 200px;
+        height: 80px;
+    }
+
+    .savings-amount {
+        font-size: 1.5rem;
+    }
+
+    .savings-name {
+        font-size: 1rem;
+    }
+
+    .video {
+        width: 100%;
     }
 }
