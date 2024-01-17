@@ -129,8 +129,9 @@ nav .nav-item-container {
     padding: 16px;
 }
 
+
 .search-box input {
-    width: 30%;
+    /* width: 30%; */
     height: 50px;
     border: none;
     border-radius: 8px;
@@ -138,14 +139,25 @@ nav .nav-item-container {
     padding-left: 16px;
 }
 
+.search-box .when {
+    position: relative;
+}
+
+.when i {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    color: #000;
+}
+
 .search-box .search-btn {
     background-color: #FF5400;
     border: none;
     border-radius: 8px;
-    width: 30%;
     height: 50px;
     font-size: 1.2rem;
-    padding-left: 16px;
+    padding: 0 40px;
     color: #fff
 }
 
@@ -201,7 +213,7 @@ nav .nav-item-container {
 
 .text-overlay {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -472,7 +484,7 @@ background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 
 
 /* small screen styles */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
 
     header,
     main {
@@ -483,6 +495,11 @@ background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 
         font-size: 20px;
     }
 
+    /* 
+    .logo .name {
+        font-size: 1.3rem;
+    } */
+
     .nav-container {
         display: none;
     }
@@ -491,11 +508,25 @@ background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 
         display: block;
     }
 
+    .section-top p {
+        width: 100%;
+        text-align: center;
+    }
+
     .hero {
         background-position: center;
     }
 
-    .search-box,
+    .section-heading {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .text-overlay,
+    .logo .name {
+        font-size: 1.3rem;
+    }
+
     .hero,
     .tour-section,
     .cards,
@@ -514,7 +545,28 @@ background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 
     }
 
     .hero input {
-        width: 80%;
+        width: 90%;
+    }
+
+    .when {
+        position: relative;
+    }
+
+    .when input {
+        width: calc(80% + 32px);
+        padding-left: 16px;
+    }
+
+    .when i {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        color: #000;
+    }
+
+    .search-box {
+        flex-direction: column;
     }
 
     .hero .search-btn {
@@ -538,7 +590,7 @@ background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 
     }
 
     .newsletter {
-        width: 70%;
+        width: 75%;
     }
 
     .newsletter input {
